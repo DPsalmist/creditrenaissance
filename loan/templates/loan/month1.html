@@ -1,0 +1,84 @@
+{% extends 'loan/base.html' %}
+{% block content %}
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+               {% include 'loan/nav.html' %}
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Month1 Payment -->
+                    <div class="row">
+                        <!-- Area Chart -->
+                        <div class="col-xl-10 col-lg-7 col-sm-6">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Month1 Payment Record</h6>
+                                </div>
+
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <article class="">
+                                        <div class="media-body">
+                                            <div class="article-metadata">
+
+                                                {% for month1 in month1_payment %}
+                                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" cellpadding="0">
+                                                    <thead>
+                                                      <tr>
+                                                        <th>Name</th>
+                                                        <th>Loan Group</th>
+                                                        <th>Payment Method</th>
+                                                        <th>Loan Details</th>
+                                                        <th>Payment Date</th>
+                                                        <th>Paid</th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      <tr>
+                                                        <td>{{ month1.name }}</td>
+                                                        <td>{{ month1.loan_group1 }}</td>
+                                                        <td>{{ month1.payment_method }}</td>
+                                                        <td>{{ month1.loan_month1 }}</td>
+                                                        <td>{{ month1.paid_date }}</td>
+                                                        <td>{{ month1 }}</td>
+                                                        <!-- <td><a class="btn btn-info btn-sm mt-1 mb-1" href="{% url 'month1-detail' month1.id %}">Edit</a></td> -->
+                                                      </tr>
+                                                    </tbody>
+                                                </table>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    </article>
+    
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+                {% include "loan/pagination.html" with page=month1_payment %}
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            {% include 'loan/footer.html' %}
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+{% endblock content %}
+
+   

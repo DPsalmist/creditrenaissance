@@ -1,0 +1,18 @@
+{% extends 'loan/user_base.html' %}
+{% block content %}
+
+	<div class="content-section ml-5">
+		<form method="POST">
+			<!-- cross site request forfery token for security against attacks -->
+			{%  csrf_token %}
+			<fieldset class="form-group">
+				<legend class="border-bottom mb-4">Delete Loan</legend>
+				<h2>Are you sure you want to delete this loan <b>{{ object.title }}</b>?</h2>
+			</fieldset>
+			<div class="form-group">
+				<button class="btn btn-outline-danger" type="submit">Yes, Delete</button>
+				<a class="btn btn-outline-secondary" href="{% url 'loan-detail' object.id %}">Cancel</a>
+			</div>
+		</form>
+	</div>
+{% endblock content %}
