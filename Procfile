@@ -1,0 +1,1 @@
+web: gunicorn microfinance_bank.wsgi --log-file -
