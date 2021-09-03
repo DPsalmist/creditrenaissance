@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost']
+ALLOWED_HOSTS = ['127.0.0.1','localhost', 'creditrenaissanceltd.herokuapp.com/']
 
 
 # Application definition
@@ -51,8 +51,9 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    #'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -131,6 +132,8 @@ USE_TZ = True
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_ROOT = 'BASE_DIR / static'
 STATIC_URL = '/static/'
+STATICFILES_DIR = 'BASE_DIR /static'
+
 STATICFILES_DIR = 'BASE_DIR /static'
 
 # STATICFILES_DIR = (
