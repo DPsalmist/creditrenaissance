@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost', 'creditrenaissanceltd.herokuapp.com/']
+ALLOWED_HOSTS = ['creditrenaissanceltd.com', '127.0.0.1','localhost', 'creditrenaissanceltd.herokuapp.com/']
 
 
 # Application definition
@@ -155,13 +155,13 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-'''
-#gmail smtp
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
-EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PWD")
+
+#mailgun smtp
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_HOST_USER = 'postmaster@mg.creditrenaissanceltd.com'
+EMAIL_HOST_PASSWORD = '5e97506649c6ca4cb5897aaa829116ef-76f111c4-6fd39095'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-'''
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
