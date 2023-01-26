@@ -16,7 +16,7 @@
                 <h1 class="text-uppercase" data-aos="fade-up">Banking Solutions</h1>
                 <p class="mb-5 desc"  data-aos="fade-up" data-aos-delay="100">We provide simple banking operations such as deposits, savings and loans.</p>
                 <div data-aos="fade-up" data-aos-delay="100">
-                  <a href="{% url 'loan-create' %}" target="" class="btn  btn-primary mr-2 mb-2">Get Started</a>
+                  <a href="{% url 'register' %}" target="" class="btn  btn-primary mr-2 mb-2">Get Started</a>
                 </div>
               </div>
 
@@ -137,32 +137,32 @@
         </div>
         <div class="row">
           
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="">
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="">
             <div class="team-member">
               <figure>
                 <ul class="social">
 <!--                   <li><a href="#"><span class="icon-facebook"></span></a></li>
                   <li><a href="#"><span class="icon-twitter"></span></a></li> -->
-                  <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                  <li><a href="#" title="View profile"><span class="icon-linkedin"></span></a></li>
 <!--                   <li><a href="#"><span class="icon-instagram"></span></a></li> -->
                 </ul>
-                <img src="{% static 'images/raymond1.jpeg' %}" alt="Image" class="img-fluid">
+                <img style="height:300px; width:100%;" src="{% static 'images/raymond1.jpeg' %}" alt="Image" class="img-fluid">
               </figure>
               <div class="p-3">
                 <h3>Raymond C. Uwakwe</h3>
-                <span class="position">CEO</span>
+                <span class=""><b>CEO</b></span>
               </div>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <!--  <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
             <div class="team-member">
               <figure>
                 <ul class="social">
-<!--                   <li><a href="#"><span class="icon-facebook"></span></a></li>
-                  <li><a href="#"><span class="icon-twitter"></span></a></li> -->
+                   <li><a href="#"><span class="icon-facebook"></span></a></li>
+                  <li><a href="#"><span class="icon-twitter"></span></a></li> 
                   <li><a href="#"><span class="icon-linkedin"></span></a></li>
-<!--                   <li><a href="#"><span class="icon-instagram"></span></a></li> -->
+                  <li><a href="#"><span class="icon-instagram"></span></a></li>
                 </ul>
                 <img src="{% static 'images/person_2.jpg' %}" alt="Image" class="img-fluid">
               </figure>
@@ -171,40 +171,40 @@
                 <span class="position">General Manager</span>
               </div>
             </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+          </div> -->
+          
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
             <div class="team-member">
               <figure>
                 <ul class="social">
-<!--                   <li><a href="#"><span class="icon-facebook"></span></a></li>
-                  <li><a href="#"><span class="icon-twitter"></span></a></li> -->
+                  <!-- <li><a href="#"><span class="icon-facebook"></span></a></li>
+                  <li><a href="#"><span class="icon-twitter"></span></a></li>  -->
                   <li><a href="#"><span class="icon-linkedin"></span></a></li>
-<!--                   <li><a href="#"><span class="icon-instagram"></span></a></li> -->
+                  <!-- <li><a href="#"><span class="icon-instagram"></span></a></li> -->
                 </ul>
-                <img src="{% static 'images/person_3.jpg' %}" alt="Image" class="img-fluid">
+                <img style="height:300px; width:100%;" src="{% static 'images/person_7.jpg' %}" alt="Image" class="img-fluid">
               </figure>
               <div class="p-3">
-                <h3>Mary Godstime</h3>
-                <span class="position">HR Manager</span>
+                <h3>Mr. Richard</h3>
+                <span class=""><b>Secretary</b></span>
               </div>
             </div>
-          </div>
+          </div> 
 
-          <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
             <div class="team-member">
               <figure>
                 <ul class="social">
-<!--                   <li><a href="#"><span class="icon-facebook"></span></a></li>
+                  <!-- <li><a href="#"><span class="icon-facebook"></span></a></li>
                   <li><a href="#"><span class="icon-twitter"></span></a></li> -->
                   <li><a href="https://www.linkedin.com/in/damilaresamuel26/"><span class="icon-linkedin"></span></a></li>
-<!--                   <li><a href="#"><span class="icon-instagram"></span></a></li> -->
+                  <!-- <li><a href="#"><span class="icon-instagram"></span></a></li>  -->
                 </ul>
-                <img style="height:250px; width:100%;" src="{% static 'images/dami1.jpeg' %}" alt="Image" class="img-fluid">
+                <img style="height:300px; width:100%;" src="{% static 'images/dami1.jpeg' %}" alt="Image" class="img-fluid">
               </figure>
               <div class="p-3">
                 <h3>Damilare Samuel</h3>
-                <span class="position">CTO</span>
+                <span class=""><b>CTO</b></span>
               </div>
             </div>
           </div>
@@ -661,7 +661,7 @@
   
     <!-- Blog -->
 
-    <section class="site-section" id="blog-section">
+<!--     <section class="site-section" id="blog-section">
       <div class="container">
         <div class="row mb-5">
           <div class="col-12 text-center" data-aos="fade">
@@ -672,21 +672,21 @@
         <div class="row">
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="">
             <div class="h-entry">
-              <a href="single.html">
+              <a href="{% url 'loan-blog' %}">
                 <img src="{% static 'images/img_1.jpg' %}" alt="Image" class="img-fluid">
               </a>
               <h2 class="font-size-regular"><a href="#">Banking is good for business? Why?</a></h2>
-              <div class="meta mb-4">Admin<span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div>
+              <div class="meta mb-4">Admin<span class="mx-2">&bullet;</span> June 18, 2022<span class="mx-2">&bullet;</span> <a href="#">News</a></div>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
               <p><a href="{% url 'loan-blog' %}">Continue Reading...</a></p>
             </div> 
           </div>
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="h-entry">
-              <a href="single.html">
+              <a href="{% url 'loan-blog' %}">
                 <img src="{% static 'images/img_4.jpg' %}" alt="Image" class="img-fluid">
               </a>
-              <h2 class="font-size-regular"><a href="#">Banking is good for business? Why?</a></h2>
+              <h2 class="font-size-regular"><a href="{% url 'loan-blog' %}">Banking is good for business? Why?</a></h2>
               <div class="meta mb-4">Admin <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
               <p><a href="{% url 'loan-blog' %}">Continue Reading...</a></p>
@@ -694,7 +694,7 @@
           </div>
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="h-entry">
-              <a href="single.html">
+              <a href="{% url 'loan-blog' %}">
                 <img src="{% static 'images/img_3.jpg' %}" alt="Image" class="img-fluid">
               </a>
               <h2 class="font-size-regular"><a href="#">Banking is good for business? Why?</a></h2>
@@ -706,7 +706,7 @@
           
         </div>
       </div>
-    </section>
+    </section> -->
 
    
 <!-- Contact -->
@@ -736,7 +736,7 @@
           <div class="col-md-4 text-center">
             <p class="mb-0">
               <span class="icon-mail_outline d-block h2 text-primary"></span>
-              <a href="mailto:info@creditrenaissanceltd.com">info@creditrenaissanceltd.com</a>
+              <a href="mailto:info@creditrenaissanceltd.com">help@creditrenaissanceltd.com</a>
             </p>
           </div>
         </div>
@@ -745,7 +745,7 @@
 
             
 
-            <form action="" method='post' class="p-5 bg-white">
+            <form method="POST" action class="p-5 bg-white">
                 {% csrf_token %}
               <h2 class="h4 text-black mb-5">Contact Form</h2> 
 
@@ -788,8 +788,6 @@
                   <input type="submit" value="Send Message" class="btn btn-primary btn-md text-white">
                 </div>
               </div>
-
-  
             </form>
           </div>
           

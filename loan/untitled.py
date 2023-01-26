@@ -1,4 +1,3 @@
-
 ###############
 '''
 A *lender* opens a *loan*. The loan has a tenure, principal, interest, total, week, group, status

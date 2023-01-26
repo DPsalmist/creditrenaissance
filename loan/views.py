@@ -7,6 +7,7 @@ from .models import Loan, Collector, Group
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .decorators import unauthenticated_user, allowed_users, admin_only
+from django.core.mail import EmailMessage, send_mail
 from .forms import *
 from users.models import Profile
 from month.models import *
@@ -23,10 +24,36 @@ from django.views.generic import (
 
 # INDEX VIEWS
 def index(request):
-	return render (request, 'loan/index.html')
+    print('This is a test')
+    if request.method == 'POST':
+        # Get details from the form
+        fname = request.POST['fname']
+        lname = request.POST['lname']
+        subject = request.POST['subject']
+        contact_email = request.POST['email']
+        message = request.POST['message']
+        
+        print('These are the details:', fname,lname,subject)
+        
+        # Extra email details
+        subject = 'A New Message From Creditrenaissance Ltd'
+        contact_message = f'Hello, \n\n' \
+                f'You have a message from {fname} {lname} with details below. \n\n' \
+                f'Message: {message}.'
+        email_msg = EmailMessage(
+            subject=subject, body=contact_message, 
+            from_email=contact_email,
+            to=['testdamilare@gmail.com'],
+            headers={'Reply-To': contact_email})
+        email_msg.send()
+        print('Message sent successfully!')
+        messages.success(request, f'Thank you for contacting us! We\'ll get back to you soon.')
+    return render (request, 'loan/index.html')
+
 # Blog View 
 def blog(request):
-	return render (request, 'loan/blog.html')
+    print('Message from the blog view')
+    return render (request, 'loan/blog.html')
 
 # STAFF DASHBOARD VIEW
 @login_required(login_url='login')
@@ -411,7 +438,7 @@ class LoanDetailView(DetailView):
 
 class LoanCreateView(LoginRequiredMixin, CreateView):
 	model = Loan
-	fields = ['title', 'principal', 'group','description']
+	fields = ['title', 'principal','description']
 
 	#overriding the form valid method
 	def form_valid(self, form):

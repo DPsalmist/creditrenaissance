@@ -145,7 +145,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 # Configure Django App for Heroku.
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #LOGIN_REDIRECT_URL = 'loan-dashboard'
 #LOGIN_URL = 'login'
@@ -153,6 +153,17 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Gmail smtp
+'''
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'testdamilare@gmail.com'
+EMAIL_HOST_PASSWORD = 'damiistesting'
+EMAIL_PORT = 587
+'''
 
 #mailgun smtp
 EMAIL_HOST = 'smtp.mailgun.org'
@@ -162,4 +173,3 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
