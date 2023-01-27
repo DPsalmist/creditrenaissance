@@ -34,7 +34,7 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
 
     #social auth
-    path('social-auth/', include('social_django.urls', namespace='social')), 
+    #path('social-auth/', include('social_django.urls', namespace='social')), 
 
     #password
     path('password-reset/', 
