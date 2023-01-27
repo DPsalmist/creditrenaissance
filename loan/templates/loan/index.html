@@ -61,7 +61,7 @@
         <div class="row">
           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
             <figure class="circle-bg">
-            <img src="{% static 'images/learn-img.jpg' %}" alt="About Us" class="img-fluid">
+            <img src="{% static 'images/aboutus1.avif' %}" alt="About Us" class="img-fluid">
             </figure>
           </div>
 
@@ -117,7 +117,7 @@
 
           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
             <figure class="circle-bg">
-            <img src="{% static 'images/about_2.jpg' %}" alt="core values" class="img-fluid">
+            <img src="{% static 'images/customer_satis1.jpeg' %}" alt="core values" class="img-fluid">
             </figure>
           </div>
 
@@ -372,9 +372,10 @@
           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
 
             <div class="owl-carousel slide-one-item-alt">
-              <img src="{% static 'images/img_2.jpg' %}" alt="Image" class="img-fluid">
-              <img src="{% static 'images/img_3.jpg' %}" alt="Image" class="img-fluid">
-              <img src="{% static 'images/img_1.jpg' %}" alt="Image" class="img-fluid">
+              <img src="{% static 'images/img_2.jpg' %}" style="height:280px;" alt="Apply online Image" class="img-fluid">
+              <img src="{% static 'images/eligibility1.png' %}" style="height:280px;" alt="Eligibility Image" class="img-fluid">
+              <img src="{% static 'images/approval1.jpeg' %}" style="height:280px;" alt="Approval Image" class="img-fluid">
+              <img src="{% static 'images/naira_credit1.jpeg' %}" style="height:280px;" alt="Get Credited Image" class="img-fluid">
             </div>
             <div class="custom-direction">
               <a href="#" class="custom-prev"><span><span class="icon-keyboard_backspace"></span></span></a><a href="#" class="custom-next"><span><span class="icon-keyboard_backspace"></span></span></a>
@@ -386,20 +387,25 @@
             <div class="owl-carousel slide-one-item-alt-text">
               <div>
                 <h2 class="section-title mb-3">01. Online Application</h2>
-                <p>Simply register by filling the application form.</p>
+                <p>Simply apply by signing up today.</p>
 
-                <p><a href="#" class="btn btn-primary mr-2 mb-2">Apply Now</a></p>
+                <p><a href="{% url 'register' %}" class="btn btn-primary mr-2 mb-2">Apply Now</a></p>
               </div>
               <div>
-                <h2 class="section-title mb-3">02. Get an approval</h2>
-                <p>We review your request and check your information in line with CBN's standards.</p>
-                <p><a href="#" class="btn btn-primary mr-2 mb-2">Apply Now</a></p>
+                <h2 class="section-title mb-3">02. Eligibity Review</h2>
+                <p>We review your loan request and check your information in line with CBN's standards.</p>
+                <p><a href="{% url 'register' %}" class="btn btn-primary mr-2 mb-2">Apply Now</a></p>
               </div>
               <div>
-                <h2 class="section-title mb-3">03. Get Credited</h2>
-                <p>After your request have been approved, you recive an offer letter and get credited into the account you provided.</p>
+                <h2 class="section-title mb-3">03. Get an approval</h2>
+                <p>Once the review is done, we approve your loan request if you're eligible otherwise, we'll offer you a suitable loan.</p>
+                <p><a href="{% url 'register' %}" class="btn btn-primary mr-2 mb-2">Apply Now</a></p>
+              </div>
+              <div>
+                <h2 class="section-title mb-3">04. Get Credited</h2>
+                <p>After your request have been approved, you will receive an offer letter and get credited into the account you provided.</p>
 
-                <p><a href="#" class="btn btn-primary mr-2 mb-2">Apply Now</a></p>
+                <p><a href="{% url 'register' %}" class="btn btn-primary mr-2 mb-2">Apply Now</a></p>
               </div>
               
             </div>
@@ -424,9 +430,9 @@
                 <img src="{% static 'images/flaticon-svg/svg/001-wallet.svg' %}" alt="Image" class="img-fluid w-25 mb-4">
               </div>
               <div>
-                <h3>Business Consulting</h3>
-                <p>We offer financial consulting services. Contact us to know more!</p>
-                <p><a href="#contact-section">Reach Out</a></p>
+                <h3>Finance Consulting</h3>
+                <p>We offer business and financial consulting services. Contact us to know more!</p>
+                <!-- <p><a href="#contact-section">Reach Out</a></p> -->
               </div>
             </div>
           </div>
@@ -436,9 +442,9 @@
                 <img src="{% static 'images/flaticon-svg/svg/003-notes.svg' %}" alt="Image" class="img-fluid w-25 mb-4">
               </div>
               <div>
-                <h3>Deposits</h3>
-                <p>You can deposit your money with us with full assurance.</p>
-                <p><a href="#contact-section">Reach Out</a></p>
+                <h3>Loans</h3>
+                <p>We provide loans to different clients, whether you're a salary earner or an entrepreneur.</p>
+                <!-- <p><a href="#contact-section">Reach Out</a></p> -->
               </div>
             </div>
           </div>
@@ -448,9 +454,9 @@
                 <img src="{% static 'images/flaticon-svg/svg/002-rich.svg' %}" alt="Imageloansloansloans" class="img-fluid w-25 mb-4">
               </div>
               <div>
-                <h3>Income Monitoring</h3>
+                <h3>Investments</h3>
                 <p>Watch your investments grow on our user-friendly dashboard.</p>
-                <p><a href="#contact-section">Reach Out</a></p>
+                <!-- <p><a href="#contact-section">Reach Out</a></p> -->
               </div>
             </div>
           </div>

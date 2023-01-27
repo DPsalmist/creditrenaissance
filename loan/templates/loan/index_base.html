@@ -3,7 +3,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Credit Renaissance &mdash; reviving your investments!</title>
+    <title>Credit Renaissance &mdash; reviving your finances!</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Damilare Samuel" />
@@ -78,10 +78,10 @@
                <li><a href="#blog-section" class="nav-link">Blog</a></li>
                 <li><a href="{% url 'loan-index' %}#contact-section" class="nav-link">Contact</a></li>
                 <!-- Login -->
-                <li><a href="/accounts/login" class="nav-link">Login</a></li>
+                <li><a href="/accounts/login" class="text-primary">Login</a></li>
                 <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-facebook"></span></a></li>
                 <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-twitter"></span></a></li>
-                <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-linkedin"></span></a></li>
+                <li class="social"><a href="https://www.linkedin.com/company/credit-renaissance-limited/" target="_blank" class="nav-link"><span class="icon-linkedin"></span></a></li>
               </ul>
             </nav>
           </div>
@@ -96,6 +96,43 @@
     {% block content %}
 
     {% endblock content %}
+
+    <script>
+    var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?72169';
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = url;
+    var options = {
+  "enabled":true,
+  "chatButtonSetting":{
+      "backgroundColor":"#4dc247",
+      "ctaText":"Send us a message",
+      "borderRadius":"25",
+      "marginLeft":"0",
+      "marginBottom":"50",
+      "marginRight":"50",
+      "position":"right"
+  },
+  "brandSetting":{
+      "brandName":"Credit Renaissance",
+      "brandSubTitle":"Typically replies within 15 minutes",
+      "brandImg":"https://drive.google.com/file/d/1I_BQZyIOGfZ0Qc3-FGgcnCULpXqLFyKx/view?usp=share_link",
+      "welcomeText":"Hi there!\nHow can I help you?",
+      "messageText":"Hello, I have a question about {{page_link}}",
+      "backgroundColor":"#0a5f54",
+      "ctaText":"Start Chat",
+      "borderRadius":"25",
+      "autoShow":false,
+      "phoneNumber":"2348186283024"
+  }
+};
+    s.onload = function() {
+        CreateWhatsappChatWidget(options);
+    };
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+</script>
 
     <footer class="site-footer">
       <div class="container">
