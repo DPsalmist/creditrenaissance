@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['creditrenaissanceltd.com', '127.0.0.1','localhost', 'creditrenaissanceltd.herokuapp.com/']
+ALLOWED_HOSTS = ['*', 'creditrenaissance.com', '127.0.0.1','localhost']
 
 
 # Application definition
@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'social_django',
 ]
 
 MIDDLEWARE = [
