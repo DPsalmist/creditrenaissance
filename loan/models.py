@@ -47,7 +47,7 @@ class Loan(models.Model):
 	loan_duration = models.IntegerField( default=6)
 	payment_status = models.CharField(max_length=30, choices=LOAN_STATUS, default='Incomplete')
 	loan_request = models.CharField(max_length=30, choices=LOAN_REQUEST, default='Pending')
-	group = models.ForeignKey(Group, null='blank', on_delete=models.CASCADE, default='None',
+	group = models.ForeignKey(Group, null='blank', blank=True, on_delete=models.CASCADE, default=2,
 							 related_name='batches')
 	owner = models.ForeignKey(User, null='blank', on_delete=models.CASCADE,related_name='borrowers')
 	description = models.TextField()

@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 #from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
+from django.contrib.auth.models import User, Group
+#from loan.models import Group
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth import authenticate, login, logout
@@ -12,17 +14,41 @@ from .signals import *
 def register_page(request):
 	form = UserRegisterForm()
 	if request.method == 'POST':
-		# username = request.POST.get('username')
-		# email = request.POST.get('email')
- 	# 	password1 = request.POST.get('password1')
- 	# 	password2 = request.POST.get('password2')
+		print('Post request received!')
+		username = request.POST.get('username')
+		email = request.POST.get('email')
+		password1 = request.POST.get('pwd1')
+		password2 = request.POST.get('pwd2')
+		group = 'customers'
 
-		form = UserRegisterForm(request.POST)
-		if form.is_valid():
-			form.save()
-			username = form.cleaned_data.get('username')
+		if password1 != password2:
+			messages.error(request, f"Your passwords don't match! Please make sure they are the same.")
+		if User.objects.filter(email=email).exists():
+			messages.error('Email already in use!')
+		if User.objects.filter(username=username).exists():
+			messages.error('Username already in use! Please try a different username.')
+		else:
+			user = User.objects.create_user(username, email)
+			group = Group.objects.get(name='customers')
+			user.groups.add(group) 
+			user.set_password(password1)
+			user.save()
 			messages.success(request, f'Your account has been created. You are now able to log in!')
+			print(f'{username} created successfully!!! with group {group}')
+
 			return redirect ('login')
+
+
+		# form = UserRegisterForm(request.POST)
+		# if form.is_valid():
+		# 	form.save()
+		# 	print('Form is valid!')
+		# 	username = form.cleaned_data.get('username')
+		# 	password = request.POST.get('pwd1')
+		# 	user = authenticate(username=username, password=password)
+		# 	login(request, user)
+		# 	messages.success(request, f'Your account has been created. You are now able to log in!')
+		# 	return redirect ('login')
 	else:
 		form = UserRegisterForm()
 	return render(request, 'users/register.html', {'form':form})
@@ -37,6 +63,7 @@ def login_page(request):
 		#Check if user exist
 		if user is not None:
 			login(request, user)
+			print('Authentication successful!')
 			return redirect ('loan-dashboard')
 		else:
 			messages.info(request, 'Username or Password incorrect')

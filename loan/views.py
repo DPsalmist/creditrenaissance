@@ -141,7 +141,7 @@ def dashboard(request):
 
 # USER DASHBOARD VIEW
 @login_required(login_url='login')
-@allowed_users(allowed_roles=['customers'])
+@allowed_users(allowed_roles=['customers', None])
 def user_page(request):
 	# Get loan user
 	current_user = request.user

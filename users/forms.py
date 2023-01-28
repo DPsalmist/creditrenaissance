@@ -29,3 +29,5 @@ class ProfileUpdateForm(forms.ModelForm):
 		model = Profile
 		fields = ['image', 'bank', 'bvn', 'phone_no', 'address', 'account_no', 'guarantor', 'guarantor_phone_no']
 
+
+#1/3 + (5/7(9/10 - 1 + 3/4))
